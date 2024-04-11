@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona z obrazem i znaczkiem pobierania</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('plakat.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        #download-icon {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <a id="download-link" download="plakat.png" href="plakat.png">
+        <img id="download-icon" src="download-icon.png" alt="Pobierz">
+    </a>
+
+    <script>
+        document.getElementById("download-icon").addEventListener("click", function() {
+            document.getElementById("download-link").click();
+        });
+    </script>
+</body>
+</html>
